@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+/*
+ * Convert a dollar amount to a number of quarters, dimes, 
+ *      nickels, and pennies.
+ */
+public class ComputeTheChange
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner (System.in);
+		System.out.print("Enter dollar amount to be converted to change: (example 1.47)");
+
+		double amount = input.nextDouble();
+		System.out.println("You have entered: "+ amount);
+
+		amount = amount + .00001;              
+		int numPennies = (int)(amount * 100); 
+
+		int numQuarters = numPennies / 25;
+		numPennies = numPennies % 25;
+
+		int numDimes = numPennies/10;
+		numPennies= numPennies % 10;		 
+
+		int numNickels = numPennies/5;
+		numPennies= numPennies % 5;
+		
+		System.out.println("\nYour Change");
+		System.out.println("Quarters: " + numQuarters);
+		System.out.println("Dimes: " + numDimes);
+		System.out.println("Nickels: " + numNickels);
+		System.out.println("Pennies: " + numPennies);
+
+	}
+}
