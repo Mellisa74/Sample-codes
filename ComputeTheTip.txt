@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class ComputeTheTip
+{
+	public static void main(String[] args)
+	{
+		//Create a Scanner object, reading from the keyboard (System.in)
+		Scanner input = new Scanner (System.in);
+
+		//prompt user to enter in the amount of the bill
+		System.out.println("Enter amount of the bill: ");
+		double bill = input.nextDouble();
+
+
+		System.out.println("Enter percent of tip:");
+		//double tip = 0.15;
+		double tip = input.nextDouble();
+		tip = tip/100;
+
+		double total = bill + bill* tip;
+
+		double tip2= bill *tip;
+		total=+total;
+
+		//display the tip and the total
+		System.out.printf("%s%20s%n", "Tip Amount  ", "  New Total with Tip  ");
+		System.out.printf("%.2f%,15.2f%n" ,tip2, total);
+
+	}
+
+}
+
+
